@@ -1,0 +1,39 @@
+{
+  "cSpell.words": [
+    "commitlint",
+    "conventionalcommits",
+    "inversify",
+    "nohoist",
+    "nrwl"
+  ],
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript"],
+  "conventionalCommits.scopes": [
+    "client",
+    "type",
+    "api",
+    "vscode"
+  ],
+  "prettier.singleQuote": true,
+  "npm.exclude": "packages/**",
+  "npm.packageManager": "yarn",
+  "prettier.configPath": ".prettierrc.js",
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "prettier.packageManager": "yarn",
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "none",
+  "prettier.vueIndentScriptAndStyle": true,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "files.associations": {
+    ".lintstagedrc": "json"
+  }
+}
