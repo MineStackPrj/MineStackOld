@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "akasaki",
+    "automock",
     "bukkit",
     "commitlint",
     "conventionalcommits",
@@ -8,6 +9,7 @@
     "gamemode",
     "inversify",
     "largebiomes",
+    "lcov",
     "maxlength",
     "minestack",
     "minlength",
@@ -15,7 +17,9 @@
     "motd",
     "nohoist",
     "npcs",
-    "nrwl"
+    "nrwl",
+    "serializers",
+    "unmocked"
   ],
   "editor.tabSize": 2,
   "editor.formatOnPaste": false,
