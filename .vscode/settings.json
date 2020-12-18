@@ -1,9 +1,20 @@
 {
   "cSpell.words": [
+    "akasaki",
+    "bukkit",
     "commitlint",
     "conventionalcommits",
+    "dockerode",
+    "gamemode",
     "inversify",
+    "largebiomes",
+    "maxlength",
+    "minestack",
+    "minlength",
+    "mojang",
+    "motd",
     "nohoist",
+    "npcs",
     "nrwl"
   ],
   "editor.tabSize": 2,

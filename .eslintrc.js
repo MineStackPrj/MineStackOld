@@ -1,17 +1,21 @@
 module.exports = {
   root: true,
   env : {
-    node: true
+    node: true,
+    es6 : true
   },
   'globals': {},
   extends  : [
-    'eslint:recommended'
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    './node_modules/gts'
   ],
-  plugins      : ['jest'],
+  plugins      : ['node', 'jest'],
   parserOptions: {
     ecmaVersion: 2020
   },
   rules: {
+    'prettier/prettier'    : 'off',
     'array-bracket-spacing': ['error', 'never', { 'singleValue': false }],
     'object-curly-spacing' : ['error', 'always'],
     'comma-dangle'         : ['error','never'],
@@ -53,18 +57,15 @@ module.exports = {
         readonly: 'array'
       }
     ],
-    '@typescript-eslint/interface-name-prefix': [
-      'error',
-      {
-        prefixWithI          : 'always',
-        allowUnderscorePrefix: true
-      }
-    ],
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        selector: 'interface',
-        format  : ['PascalCase']
+        'selector': 'interface',
+        'format'  : ['PascalCase'],
+        'custom'  : {
+          'regex': '^I[A-Z]',
+          'match': true
+        }
       },
       {
         selector: 'class',
@@ -134,6 +135,9 @@ module.exports = {
       files: '*.spec.ts',
       env  : {
         jest: true
+      },
+      rules: {
+        '@typescript-eslint/ban-ts-comment': 'off'
       }
     },
     {

@@ -1,0 +1,26 @@
+{
+  "name": "type-def-prj",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "t.akasaki <t.akasaki.csharp@gmail.com>",
+  "homepage": "https://github.com/MineStackPrj/MineStack/tree/master/packages/common/type-def-prj#readme",
+  "license": "MIT",
+  "private": true,
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MineStackPrj/MineStack.git"
+  },
+  "scripts": {
+    "build:pre": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/MineStackPrj/MineStack/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}

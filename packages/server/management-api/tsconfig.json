@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "lib": ["ES2018", "dom"],
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["reflect-metadata", "jest", "jest-chain"],
+    "baseUrl": ".",
+    "paths": {
+      "@type-def-prj*": [
+        "../../../lib/type-def-prj*"
+      ]
+    }
+  },
+  "include": ["src", "../../../lib"]
+}
