@@ -20,6 +20,7 @@
     "npcs",
     "nrwl",
     "serializers",
+    "ttfb",
     "unmocked"
   ],
   "editor.tabSize": 2,
