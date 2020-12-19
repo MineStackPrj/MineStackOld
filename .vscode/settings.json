@@ -22,7 +22,10 @@
     "nohoist",
     "npcs",
     "nrwl",
+    "pmmmwh",
+    "reduxjs",
     "serializers",
+    "svgr",
     "ttfb",
     "typeahead",
     "unmocked"
