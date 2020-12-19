@@ -95,9 +95,9 @@ describe('MongooseService', () => {
 
     it('データベースから検索に成功', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
-      const spyFinedBy = jest.spyOn(modelMock, 'findById').mockImplementation(() => {
-        return execMock;
-      });
+
+      const spyFinedBy = jest.spyOn(MinecraftServerModel, 'findById').mockImplementation(() => execMock as any);
+
       const spyExec = jest.spyOn(execMock, 'exec').mockResolvedValue({});
 
       /* ------------------------ テスト対象関数を実行 ------------------------ */
