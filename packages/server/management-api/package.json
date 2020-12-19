@@ -14,7 +14,7 @@
     "url": "git+https://github.com/MineStackPrj/MineStack.git"
   },
   "scripts": {
-    "test": "jest --config jest.config.js",
+    "test": "jest --config jest.config.js --watch",
     "test:coverage": "jest --config jest.config.js --coverage",
     "build": "webpack --config webpack.config.js",
     "build:prod": "set WEBPACK_BUILD_OPTION=prod && webpack --config webpack.config.js"

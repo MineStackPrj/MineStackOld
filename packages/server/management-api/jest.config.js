@@ -24,7 +24,7 @@ module.exports = {
   ],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: '<rootDir>/coverage/server/management-api',
+  coverageDirectory: '<rootDir>/../../../coverage/server/management-api',
 
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: ['/node_modules/', '/dist/'],
@@ -69,7 +69,9 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    '^@type-def-prj(.*)$': '<rootDir>/../../common/type-def-prj/src/$1'
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -131,7 +133,7 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['**/src/server/*.spec.ts', '**/src/server/**/*.spec.ts'],
+  testMatch: ['**/src/*.spec.ts', '**/src/**/*.spec.ts'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

@@ -34,7 +34,7 @@ const common = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     alias     : {
-      '@type-def-prj': path.resolve(__dirname, './../../../lib/type-def-prj')
+      '@type-def-prj': path.resolve(__dirname, './../../common/type-def-prj/src')
     }
   }
 };

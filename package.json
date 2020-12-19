@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setup": "yarn && yarn lerna bootstrap && yarn lerna run build:pre",
-    "build": "yarn lerna run build:pre && yarn lerna run build",
-    "build:prod": "yarn lerna run build:pre && yarn lerna run build:prod",
+    "setup": "yarn && yarn lerna bootstrap",
+    "build": "yarn lerna run build",
+    "build:prod": "yarn lerna run build:prod",
     "lint:staged": "lint-staged",
-    "lint:fix": "eslint --config .eslintrc.js --fix"
+    "lint:fix": "eslint --config .eslintrc.js --fix",
+    "test:coverage": "yarn lerna run test:coverage"
   },
   "repository": {
     "type": "git",
