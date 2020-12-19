@@ -105,7 +105,7 @@ describe('MinecraftServerTable', () => {
       expect(spy).toBeCalled();
     });
 
-    it('insert failed.', async () => {
+    it('insert failed.1', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const dto: MinecraftServerCreateDto = {
         name      : 'Test',
@@ -159,7 +159,7 @@ describe('MinecraftServerTable', () => {
       expect(spy).toBeCalled();
     });
 
-    it('insert failed.', async () => {
+    it('insert failed.2', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const dto: MinecraftServerCreateDto = {
         name      : 'Test',
@@ -213,7 +213,7 @@ describe('MinecraftServerTable', () => {
       expect(spy).toBeCalled();
     });
 
-    it('insert failed.', async () => {
+    it('insert failed.3', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const dto: MinecraftServerCreateDto = {
         name      : 'Test',
@@ -277,7 +277,7 @@ describe('MinecraftServerTable', () => {
 
     afterEach(() => {});
 
-    it('マイクラサーバー取得', async () => {
+    it('マイクラサーバー取得1', async () => {
       // @ts-ignore
       const spy = jest.spyOn(mongoose, 'findById').mockResolvedValue({ a: 'b' });
 
@@ -289,7 +289,7 @@ describe('MinecraftServerTable', () => {
       expect(spy).toBeCalled();
     });
 
-    it('マイクラサーバー取得', async () => {
+    it('マイクラサーバー取得2', async () => {
       // @ts-ignore
       const spy = jest.spyOn(mongoose, 'findById').mockRejectedValue(new DatabaseError(''));
 

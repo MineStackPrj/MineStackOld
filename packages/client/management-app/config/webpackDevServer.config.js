@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
@@ -35,10 +35,10 @@ module.exports = function (proxy, allowedHost) {
     disableHostCheck:
       !proxy || process.env.DANGEROUSLY_DISABLE_HOST_CHECK === 'true',
     // Enable gzip compression of generated files.
-    compress: true,
+    compress             : true,
     // Silence WebpackDevServer's own logs since they're generally not useful.
     // It will still show compile warnings and errors with this setting.
-    clientLogLevel: 'none',
+    clientLogLevel       : 'none',
     // By default WebpackDevServer serves physical files from current directory
     // in addition to all the virtual build products that it serves from memory.
     // This is confusing because those files won’t automatically be available in
@@ -53,22 +53,22 @@ module.exports = function (proxy, allowedHost) {
     // for files like `favicon.ico`, `manifest.json`, and libraries that are
     // for some reason broken when imported through webpack. If you just want to
     // use an image, put it in `src` and `import` it from JavaScript instead.
-    contentBase: paths.appPublic,
+    contentBase          : paths.appPublic,
     contentBasePublicPath: paths.publicUrlOrPath,
     // By default files from `contentBase` will not trigger a page reload.
-    watchContentBase: true,
+    watchContentBase     : true,
     // Enable hot reloading server. It will provide WDS_SOCKET_PATH endpoint
     // for the WebpackDevServer client so it can learn when the files were
     // updated. The WebpackDevServer client is included as an entry point
     // in the webpack development configuration. Note that only changes
     // to CSS are currently hot reloaded. JS changes will refresh the browser.
-    hot: true,
+    hot                  : true,
     // Use 'ws' instead of 'sockjs-node' on server since we're using native
     // websockets in `webpackHotDevClient`.
-    transportMode: 'ws',
+    transportMode        : 'ws',
     // Prevent a WS client from getting injected as we're already including
     // `webpackHotDevClient`.
-    injectClient: false,
+    injectClient         : false,
     // Enable custom sockjs pathname for websocket connection to hot reloading server.
     // Enable custom sockjs hostname, pathname and port for websocket connection
     // to hot reloading server.
@@ -79,25 +79,25 @@ module.exports = function (proxy, allowedHost) {
     // we specified in the webpack config. When homepage is '.', default to serving
     // from the root.
     // remove last slash so user can land on `/test` instead of `/test/`
-    publicPath: paths.publicUrlOrPath.slice(0, -1),
+    publicPath           : paths.publicUrlOrPath.slice(0, -1),
     // WebpackDevServer is noisy by default so we emit custom message instead
     // by listening to the compiler events with `compiler.hooks[...].tap` calls above.
-    quiet: true,
+    quiet                : true,
     // Reportedly, this avoids CPU overload on some systems.
     // https://github.com/facebook/create-react-app/issues/293
     // src/node_modules is not ignored to support absolute imports
     // https://github.com/facebook/create-react-app/issues/1065
-    watchOptions: {
-      ignored: ignoredFiles(paths.appSrc),
+    watchOptions         : {
+      ignored: ignoredFiles(paths.appSrc)
     },
-    https: getHttpsConfig(),
+    https             : getHttpsConfig(),
     host,
-    overlay: false,
+    overlay           : false,
     historyApiFallback: {
       // Paths with dots should still use the history fallback.
       // See https://github.com/facebook/create-react-app/issues/387.
       disableDotRule: true,
-      index: paths.publicUrlOrPath,
+      index         : paths.publicUrlOrPath
     },
     public: allowedHost,
     // `proxy` is run between `before` and `after` `webpack-dev-server` hooks
@@ -125,6 +125,6 @@ module.exports = function (proxy, allowedHost) {
       // it used the same host and port.
       // https://github.com/facebook/create-react-app/issues/2272#issuecomment-302832432
       app.use(noopServiceWorkerMiddleware(paths.publicUrlOrPath));
-    },
+    }
   };
 };

@@ -98,7 +98,7 @@ describe('MinecraftController', () => {
       expect(spy).toBeCalled();
     });
 
-    it('マイクラのサーバー作成に失敗', async () => {
+    it('マイクラのサーバー作成に失敗(InternalServerResponse)', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const body: any = {};
       const spy = jest.spyOn(service, 'create').mockRejectedValue(new InternalServerResponse());
@@ -114,7 +114,7 @@ describe('MinecraftController', () => {
       expect(spy).toBeCalled();
     });
 
-    it('マイクラのサーバー作成に失敗', async () => {
+    it('マイクラのサーバー作成に失敗(AlreadyInUsedPortError)', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const body: any = {};
       const spy = jest.spyOn(service, 'create').mockRejectedValue(new AlreadyInUsedPortError());
@@ -222,7 +222,7 @@ describe('MinecraftController', () => {
       expect(spy).toBeCalled();
     });
 
-    it('サーバーエラーのとき', async () => {
+    it('サーバーエラーのとき(InternalServerResponse)', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const minecraftId = '';
 
@@ -240,7 +240,7 @@ describe('MinecraftController', () => {
       expect(spy).toBeCalled();
     });
 
-    it('サーバーエラーのとき', async () => {
+    it('サーバーエラーのとき(NotFoundError)', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const minecraftId = '';
 

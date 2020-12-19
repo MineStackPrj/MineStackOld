@@ -8,7 +8,9 @@ module.exports = {
   extends  : [
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    './node_modules/gts'
+    './node_modules/gts',
+    'react-app',
+    'react-app/jest'
   ],
   plugins      : ['node', 'jest'],
   parserOptions: {
@@ -128,7 +130,11 @@ module.exports = {
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/array-type'                   : 'off',
         '@typescript-eslint/interface-name-prefix'        : 'off',
-        '@typescript-eslint/naming-convention'            : 'off'
+        '@typescript-eslint/naming-convention'            : 'off',
+        '@typescript-eslint/no-var-requires'              : 'off',
+        'node/no-unpublished-import'                      : 'off',
+        'node/no-unpublished-require'                     : 'off',
+        'no-process-exit'                                 : 'off'
       }
     },
     {
@@ -137,7 +143,8 @@ module.exports = {
         jest: true
       },
       rules: {
-        '@typescript-eslint/ban-ts-comment': 'off'
+        '@typescript-eslint/ban-ts-comment': 'off',
+        'jest/valid-title'                 : 'error'
       }
     },
     {
@@ -166,6 +173,36 @@ module.exports = {
           }
         ],
         'node/no-unpublished-import': 'off'
+      }
+    },
+    {
+      files: '*.tsx',
+      rules: {
+        'no-restricted-syntax': [
+          'error',
+          'TSEnumDeclaration',
+          {
+            selector: 'ForInStatement',
+            message :
+              'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.'
+          },
+          {
+            selector: 'ForOfStatement',
+            message :
+              'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.'
+          },
+          {
+            selector: 'LabeledStatement',
+            message : 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
+          },
+          {
+            selector: 'WithStatement',
+            message : '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
+          }
+        ],
+        'node/no-unpublished-import': ['error', {
+          'allowModules': ['@testing-library/react']
+        }]
       }
     }
   ]

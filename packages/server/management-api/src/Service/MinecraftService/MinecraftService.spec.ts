@@ -135,7 +135,7 @@ describe('MinecraftService', () => {
       expect(dockerStateSpy).toBeCalled();
     });
 
-    it('Minecraft Serverの作成に失敗', async () => {
+    it('Minecraft Serverの作成に失敗1', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const obj: any = {
         startServer: true,
@@ -162,7 +162,7 @@ describe('MinecraftService', () => {
       expect(dockerStateSpy).not.toBeCalled();
     });
 
-    it('Minecraft Serverの作成に失敗', async () => {
+    it('Minecraft Serverの作成に失敗2', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const obj: any = {
         startServer: true,
@@ -257,7 +257,7 @@ describe('MinecraftService', () => {
       expect(getStatusSpy).toBeCalled();
     });
 
-    it('マイクラサーバー情報の取得に失敗(InternalServerError)', async () => {
+    it('マイクラサーバー情報の取得に失敗(NotFoundError)', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const getSpy = jest.spyOn(table, 'get').mockRejectedValue(new NotFoundError());
       const getStatusSpy = jest.spyOn(docker, 'getStatus').mockResolvedValue('running');

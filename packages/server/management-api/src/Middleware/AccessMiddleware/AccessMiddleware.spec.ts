@@ -45,7 +45,7 @@ describe('AccessMiddleware', () => {
 
     afterEach(() => {});
 
-    it('', async () => {
+    it('コンソール出力しているかを確認', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const req: any = {
         method: 'GET',
