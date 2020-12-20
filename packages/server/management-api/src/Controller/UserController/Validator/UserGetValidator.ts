@@ -1,7 +1,7 @@
 import { ApiRequestValidator } from '../../../Middleware/ValidatorMiddleware/ApiRequestValidator';
 import { ValidatorMiddleware } from '../../../Middleware/ValidatorMiddleware/ValidatorMiddleware';
 
-export class MinecraftGetValidator extends ValidatorMiddleware {
+export class UserGetValidator extends ValidatorMiddleware {
   /**
    * Bodyのバリデーター
    */
@@ -10,11 +10,12 @@ export class MinecraftGetValidator extends ValidatorMiddleware {
   /**
    * Paramのバリデーター
    */
-  protected paramValidator: ApiRequestValidator<{ minecraftId: string }> = {
-    minecraftId: {
-      type    : 'string',
-      required: true,
-      regExp  : /^[0-9a-f]{24}$/
+  protected paramValidator: ApiRequestValidator<any> = {
+    userId: {
+      type     : 'string',
+      required : true,
+      minLength: 6,
+      maxLength: 30
     }
   };
 

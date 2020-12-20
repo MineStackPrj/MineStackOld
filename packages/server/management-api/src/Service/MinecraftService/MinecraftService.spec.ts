@@ -135,7 +135,7 @@ describe('MinecraftService', () => {
       expect(dockerStateSpy).toBeCalled();
     });
 
-    it('Minecraft Serverの作成に失敗1', async () => {
+    it('Minecraft Serverの作成に失敗(InternalServerError)', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const obj: any = {
         startServer: true,
@@ -162,7 +162,7 @@ describe('MinecraftService', () => {
       expect(dockerStateSpy).not.toBeCalled();
     });
 
-    it('Minecraft Serverの作成に失敗2', async () => {
+    it('Minecraft Serverの作成に失敗(AlreadyInUsedPortError)', async () => {
       /* --------------------------- テストの前処理 --------------------------- */
       const obj: any = {
         startServer: true,

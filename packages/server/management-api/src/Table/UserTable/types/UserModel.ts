@@ -5,14 +5,7 @@ import { IUser } from './IUser';
 import { IUserDocument } from './IUserDocument';
 
 const schema: MongooseSchemaDefinition<IUser> = {
-  email: {
-    type     : String,
-    required : true,
-    unique   : true,
-    minlength: 1,
-    maxlength: 256
-  },
-  username: {
+  userId: {
     type     : String,
     required : true,
     minlength: 1,

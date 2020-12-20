@@ -1,4 +1,3 @@
-
 import { MinecraftServerTypeList, MinecraftServerVersionList } from '@type-def-prj/Minecraft';
 
 import { ApiRequestValidator } from '../../../Middleware/ValidatorMiddleware/ApiRequestValidator';

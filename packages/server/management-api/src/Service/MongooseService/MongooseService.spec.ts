@@ -16,9 +16,6 @@ describe('MongooseService', () => {
   let container: Container;
   let service: MongooseService;
 
-  const execMock = {
-    exec: jest.fn()
-  };
   const modelMock = {
     save    : jest.fn(),
     findById: jest.fn()
@@ -81,33 +78,6 @@ describe('MongooseService', () => {
 
       /* ------------------------------ 評価項目 ------------------------------ */
       expect(spy).toBeCalled();
-    });
-  });
-
-  describe('findById', () => {
-    beforeAll(() => {});
-
-    afterAll(() => {});
-
-    beforeEach(() => {});
-
-    afterEach(() => {});
-
-    it('データベースから検索に成功', async () => {
-      /* --------------------------- テストの前処理 --------------------------- */
-
-      const spyFinedBy = jest.spyOn(MinecraftServerModel, 'findById').mockImplementation(() => execMock as any);
-
-      const spyExec = jest.spyOn(execMock, 'exec').mockResolvedValue({});
-
-      /* ------------------------ テスト対象関数を実行 ------------------------ */
-      const result = await service.findById(MinecraftServerModel, 'a');
-
-      /* ------------------------------ 評価項目 ------------------------------ */
-      expect(result).toEqual({});
-      expect(spyFinedBy).toBeCalled();
-      expect(spyFinedBy).toBeCalledWith('a');
-      expect(spyExec).toBeCalled();
     });
   });
 });

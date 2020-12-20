@@ -1,22 +1,30 @@
 import { ApiRequestValidator } from '../../../Middleware/ValidatorMiddleware/ApiRequestValidator';
 import { ValidatorMiddleware } from '../../../Middleware/ValidatorMiddleware/ValidatorMiddleware';
+import { IUser } from '../../../Table/UserTable/types/IUser';
 
-export class MinecraftGetValidator extends ValidatorMiddleware {
+export class UserCreateValidator extends ValidatorMiddleware {
   /**
    * Bodyのバリデーター
    */
-  protected bodyValidator = undefined;
+  protected bodyValidator: ApiRequestValidator<IUser> = {
+    userId: {
+      type     : 'string',
+      required : true,
+      minLength: 6,
+      maxLength: 30
+    },
+    password: {
+      type     : 'string',
+      required : true,
+      minLength: 8,
+      maxLength: 256
+    }
+  };
 
   /**
    * Paramのバリデーター
    */
-  protected paramValidator: ApiRequestValidator<{ minecraftId: string }> = {
-    minecraftId: {
-      type    : 'string',
-      required: true,
-      regExp  : /^[0-9a-f]{24}$/
-    }
-  };
+  protected paramValidator = undefined;
 
   /**
    * Queryのバリデーター

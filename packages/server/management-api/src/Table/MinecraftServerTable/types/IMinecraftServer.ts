@@ -4,12 +4,12 @@ import { IServerProperties } from './ServerProperties';
 
 export interface IMinecraftServer {
   /**
-   * サーバを一意に指定するID
+   * サーバーを一意に指定するID
    */
   _id: any;
 
   /**
-   * サーバ名
+   * サーバー名
    */
   name: string;
 
@@ -19,27 +19,27 @@ export interface IMinecraftServer {
   version: MinecraftServerVersion;
 
   /**
-   * サーバの種類
+   * サーバーの種類
    */
   serverType: MinecraftServerType;
 
   /**
-   * サーバプロパティ
+   * サーバープロパティ
    */
   properties: IServerProperties;
 
   /**
-   * サーバがホストするポート番号を設定する
+   * サーバーがホストするポート番号を設定する
    */
   serverPort: number;
 
   /**
-   * サーバ作成日
+   * サーバー作成日
    */
   created: Date;
 
   /**
-   * サーバ更新日
+   * サーバー更新日
    */
   updated: Date;
 }

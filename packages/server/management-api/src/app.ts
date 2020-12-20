@@ -2,6 +2,7 @@ import * as bodyParser from 'body-parser';
 import express from 'express';
 import { InversifyExpressServer } from 'inversify-express-utils';
 import mongoose from 'mongoose';
+import passport from 'passport';
 
 import { mongoUrl } from './config';
 import { createContainer } from './container';
@@ -27,7 +28,18 @@ export class App {
         extended: true
       })
     );
+
     app.use(bodyParser.json());
+
+    // CORS回避
+    app.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*');
+      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+      next();
+    });
+
+    //passportの設定
+    app.use(passport.initialize());
 
     // 接続する MongoDB の設定
     mongoose.Promise = global.Promise;
