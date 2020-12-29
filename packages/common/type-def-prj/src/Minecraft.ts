@@ -19,6 +19,11 @@ export const MinecraftServerVersionList = ['latest', '1.16'] as const;
 export type MinecraftServerVersion = typeof MinecraftServerVersionList[number];
 
 /**
+ * Minecraftのデフォルトポート番号
+ */
+export const MinecraftDefaultPortNumber = 25565;
+
+/**
  * マイクラサーバーの状態リスト
  */
 export const MinecraftServerStatusList = ['running', 'exited'] as const;
