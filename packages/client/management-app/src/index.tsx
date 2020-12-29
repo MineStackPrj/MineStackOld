@@ -1,5 +1,6 @@
 import './index.scss';
 
+import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -10,16 +11,17 @@ import teal from '@material-ui/core/colors/teal';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { configureStore } from '@reduxjs/toolkit';
 
+import { getLocalStorage } from './actions/LocalStorage';
 import App from './App';
 import { indexReducer } from './reducers';
-import reportWebVitals from './reportWebVitals';
+import { setUser } from './reducers/UserAuthInfoReducers';
 
 // Material-UIテーマカスタマイズ
 const theme = createMuiTheme({
   palette: {
-    type     : 'dark',
-    primary  : teal,
-    secondary: green
+    type     : 'light', // light or dark
+    primary  : teal, // primaryのカラー
+    secondary: green // secondaryのカラー
   },
   typography: {
     fontSize: 14
@@ -28,6 +30,14 @@ const theme = createMuiTheme({
 
 // ReduxのStoreを生成
 const store = configureStore({ reducer: indexReducer });
+
+// LocalStorageからログイン情報を持ってきて、ReduxStoreにDispatch
+const userInfo = getLocalStorage('UserInfo') ?? { isAuth: false, jwtToken: '' };
+store.dispatch(setUser(userInfo));
+
+// Axios設定
+axios.defaults.baseURL = 'http://localhost:4500/api';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -39,10 +49,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 
 export type AppDispatch = typeof store.dispatch;

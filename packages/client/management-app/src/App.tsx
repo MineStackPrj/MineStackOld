@@ -1,28 +1,38 @@
 import './App.scss';
 
-import React from 'react';
+// CSS
+import React, { Component } from 'react';
+import { Switch } from 'react-router-dom';
 
-import logo from './logo.svg';
+import ResponsiveDrawer from './components/Drawer';
+import GuestRoute from './components/routing/GuestRoute';
+import PrivateRoute from './components/routing/PrivateRoute';
+import RoutingURIDefine from './define/RoutingUri';
+import CreateServer from './pages/CreateServer';
+import Login from './pages/Login';
 
-function App(): JSX.Element {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// React関連
+// コンテンツ
+// Route関連
+
+const Dashboard = (): JSX.Element => {
+  return <h2>This page is Dashboard</h2>;
+};
+
+export default class App extends Component {
+  public render(): JSX.Element {
+    return (
+      <div className="App">
+        <Switch>
+          <GuestRoute path="/login" component={Login} />
+          <ResponsiveDrawer>
+            <Switch>
+              <PrivateRoute path={`/${RoutingURIDefine.createServer}`} component={CreateServer} />
+              <PrivateRoute path={`/${RoutingURIDefine.dashboard}`} component={Dashboard} />
+            </Switch>
+          </ResponsiveDrawer>
+        </Switch>
+      </div>
+    );
+  }
 }
-
-export default App;

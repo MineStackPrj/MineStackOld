@@ -18,9 +18,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@type-def-prj*": [
+        "../../common/type-def-prj/src*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "src", "../../common/type-def-prj/src"
   ]
 }
