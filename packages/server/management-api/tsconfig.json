@@ -12,7 +12,6 @@
     "baseUrl": ".",
     "paths": {
       "@type-def-prj*": [
-        // "../../../lib/type-def-prj*"
         "../../common/type-def-prj/src*"
       ]
     }
