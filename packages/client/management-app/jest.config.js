@@ -2,6 +2,7 @@ module.exports = {
   'roots': [
     '<rootDir>/src'
   ],
+  'coverageDirectory'  : '<rootDir>/../../../coverage/client/management-app',
   'collectCoverageFrom': [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts'
@@ -30,7 +31,8 @@ module.exports = {
   'modulePaths'     : [],
   'moduleNameMapper': {
     '^react-native$'                 : 'react-native-web',
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^@type-def-prj(.*)$'            : '<rootDir>/../../common/type-def-prj/src/$1'
   },
   'moduleFileExtensions': [
     'web.js',
