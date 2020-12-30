@@ -1,8 +1,8 @@
 import { Container, decorate, injectable } from 'inversify';
 import { mocked } from 'ts-jest/utils';
 
-import { TYPES } from '@/TYPES';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 import { MinecraftServerModel } from '@table/MinecraftServerTable/types/MinecraftServerModel';
 import { DatabaseError } from '@table/MongooseError';
 

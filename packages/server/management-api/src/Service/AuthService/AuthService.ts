@@ -5,9 +5,9 @@ import passport from 'passport';
 import { ExtractJwt, Strategy as JwtStrategy, VerifyCallback } from 'passport-jwt';
 import { IStrategyOptions, IVerifyOptions, Strategy as LocalStrategy, VerifyFunction } from 'passport-local';
 
-import { TYPES } from '@/TYPES';
 import { LoggerService } from '@service/LoggerService/LoggerService';
 import { UserService } from '@service/UserService/UserService';
+import { TYPES } from '@src/TYPES';
 
 @injectable()
 export class AuthService {

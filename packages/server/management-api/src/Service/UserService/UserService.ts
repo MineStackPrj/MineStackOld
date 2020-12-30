@@ -1,9 +1,9 @@
 import * as bcrypt from 'bcrypt';
 import { inject, injectable } from 'inversify';
 
-import { passwordSalt } from '@/config';
-import { TYPES } from '@/TYPES';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { passwordSalt } from '@src/config';
+import { TYPES } from '@src/TYPES';
 import { IUser } from '@table/UserTable/types/IUser';
 import { UserTable } from '@table/UserTable/UserTable';
 

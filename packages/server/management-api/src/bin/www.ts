@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 
-import { App } from '@/app';
-import { serverPort } from '@/config';
+import { App } from '@src/app';
+import { serverPort } from '@src/config';
 
 const app = new App().server.build();
 

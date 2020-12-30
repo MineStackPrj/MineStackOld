@@ -1,7 +1,7 @@
 import { Container, decorate, injectable } from 'inversify';
 
-import { TYPES } from '@/TYPES';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 
 import { AccessMiddleware } from './AccessMiddleware';
 

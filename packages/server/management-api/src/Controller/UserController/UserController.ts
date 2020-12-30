@@ -2,9 +2,9 @@ import { inject } from 'inversify';
 import { BaseHttpController, controller, httpGet, httpPost, requestBody, requestParam } from 'inversify-express-utils';
 import { JsonResult } from 'inversify-express-utils/dts/results';
 
-import { TYPES } from '@/TYPES';
 import { LoggerService } from '@service/LoggerService/LoggerService';
 import { UserService } from '@service/UserService/UserService';
+import { TYPES } from '@src/TYPES';
 import { IUser } from '@table/UserTable/types/IUser';
 
 @controller('/users', TYPES.middleware.access)

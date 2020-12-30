@@ -1,8 +1,8 @@
 import { Container, decorate, injectable } from 'inversify';
 
-import { TYPES } from '@/TYPES';
 import { InternalServerError } from '@error/InternalServerError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 
 import { DockerError } from './DockerError';
 import { DockerService } from './DockerService';

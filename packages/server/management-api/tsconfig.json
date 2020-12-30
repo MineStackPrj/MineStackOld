@@ -16,7 +16,7 @@
       "@middleware*": ["./src/Middleware*"],
       "@service*": ["./src/Service*"],
       "@table*": ["./src/Table*"],
-      "@*": ["./src*"],
+      "@src*": ["./src*"],
       "@type-def-prj*": [
         "../../common/type-def-prj/src*"
       ]

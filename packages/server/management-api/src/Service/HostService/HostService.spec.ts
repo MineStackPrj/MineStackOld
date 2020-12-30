@@ -2,9 +2,9 @@ import getPort from 'get-port';
 import { Container, decorate, injectable } from 'inversify';
 import { mocked } from 'ts-jest/utils';
 
-import { TYPES } from '@/TYPES';
 import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 
 import { HostService } from './HostService';
 

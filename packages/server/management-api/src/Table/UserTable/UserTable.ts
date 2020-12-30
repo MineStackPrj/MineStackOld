@@ -1,8 +1,8 @@
 import { inject, injectable } from 'inversify';
 
-import { TYPES } from '@/TYPES';
 import { InternalServerError } from '@error/InternalServerError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 import { DatabaseError } from '@table/MongooseError';
 
 import { IUser } from './types/IUser';

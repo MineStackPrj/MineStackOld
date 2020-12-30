@@ -1,9 +1,9 @@
 import { Container, decorate, injectable } from 'inversify';
 
-import { TYPES } from '@/TYPES';
 import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
 import { MinecraftService } from '@service/MinecraftService/MinecraftService';
+import { TYPES } from '@src/TYPES';
 import { SuccessResponse } from '@type-def-prj/Response';
 import { BadRequestResponse } from '@type-def-prj/Response/BadRequestResponse';
 import { InternalServerResponse } from '@type-def-prj/Response/InternalServerResponse';

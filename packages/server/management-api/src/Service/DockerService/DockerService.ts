@@ -1,8 +1,8 @@
 import Dockerode from 'dockerode';
 import { inject, injectable } from 'inversify';
 
-import { TYPES } from '@/TYPES';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 import { IMinecraftServer } from '@table/MinecraftServerTable/types/IMinecraftServer';
 import { MinecraftServerStatus } from '@type-def-prj/Minecraft';
 

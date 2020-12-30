@@ -4,11 +4,11 @@ import {
   controller, httpGet, httpPost, interfaces, requestBody, requestParam, response
 } from 'inversify-express-utils';
 
-import { TYPES } from '@/TYPES';
 import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
 import { MinecraftService } from '@service/MinecraftService/MinecraftService';
 import { MinecraftServiceCreateRequest } from '@service/MinecraftService/types/MinecraftServiceRequest';
+import { TYPES } from '@src/TYPES';
 import { NotFoundError } from '@table/NotFoundError';
 import { IResponse, SuccessResponse } from '@type-def-prj/Response';
 import { BadRequestResponse } from '@type-def-prj/Response/BadRequestResponse';

@@ -1,9 +1,9 @@
 import { Container, decorate, injectable } from 'inversify';
 
-import { TYPES } from '@/TYPES';
 import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
 import { MongooseService } from '@service/MongooseService/MongooseService';
+import { TYPES } from '@src/TYPES';
 import { DatabaseError } from '@table/MongooseError';
 
 import { MinecraftServerTable } from './MinecraftServerTable';

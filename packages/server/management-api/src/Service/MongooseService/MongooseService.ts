@@ -1,8 +1,8 @@
 import { inject, injectable } from 'inversify';
 import mongoose, { Document } from 'mongoose';
 
-import { TYPES } from '@/TYPES';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 import { DatabaseError } from '@table/MongooseError';
 import { NotFoundError } from '@table/NotFoundError';
 

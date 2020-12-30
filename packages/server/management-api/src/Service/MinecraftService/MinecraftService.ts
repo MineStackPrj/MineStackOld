@@ -1,11 +1,11 @@
 import { inject, injectable } from 'inversify';
 
-import { TYPES } from '@/TYPES';
 import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
 import { InternalServerError } from '@error/InternalServerError';
 import { DockerService } from '@service/DockerService/DockerService';
 import { HostService } from '@service/HostService/HostService';
 import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 import { MinecraftServerTable } from '@table/MinecraftServerTable/MinecraftServerTable';
 import { IMinecraftServer } from '@table/MinecraftServerTable/types/IMinecraftServer';
 import { NotFoundError } from '@table/NotFoundError';

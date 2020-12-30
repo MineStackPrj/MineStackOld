@@ -1,7 +1,7 @@
 import { Container } from 'inversify';
 import log4js from 'log4js';
 
-import { TYPES } from '@/TYPES';
+import { TYPES } from '@src/TYPES';
 
 import { LoggerService } from './LoggerService';
 import { LogLevelEnumList } from './LogLevel';
