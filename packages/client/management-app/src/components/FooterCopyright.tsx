@@ -1,7 +1,8 @@
+import React from 'react';
+
+import { copyrightString } from '@/config';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import React from 'react';
-import { copyrightString } from '../config';
 
 /**
  * footerにつけるcopyrightコンポーネント

@@ -21,6 +21,14 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
+      "@static*": ["./public*"],
+      "@actions*": ["./src/actions*"],
+      "@components*": ["./src/components*"],
+      "@define*": ["./src/define*"],
+      "@pages*": ["./src/pages*"],
+      "@reducers*": ["./src/reducers*"],
+      "@utils*": ["./src/utils*"],
+      "@/*": ["./src/*"],
       "@type-def-prj*": [
         "../../common/type-def-prj/src*"
       ]
