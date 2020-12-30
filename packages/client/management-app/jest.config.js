@@ -32,6 +32,14 @@ module.exports = {
   'moduleNameMapper': {
     '^react-native$'                 : 'react-native-web',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^@static(.*)$'                  : '<rootDir>/public/$1',
+    '^@actions(.*)$'                 : '<rootDir>/src/actions/$1',
+    '^@components(.*)$'              : '<rootDir>/src/components/$1',
+    '^@define(.*)$'                  : '<rootDir>/src/define/$1',
+    '^@pages(.*)$'                   : '<rootDir>/src/pages/$1',
+    '^@reducers(.*)$'                : '<rootDir>/src/reducers/$1',
+    '^@utils(.*)$'                   : '<rootDir>/src/utils/$1',
+    '^@src(.*)$'                     : '<rootDir>/src/$1',
     '^@type-def-prj(.*)$'            : '<rootDir>/../../common/type-def-prj/src/$1'
   },
   'moduleFileExtensions': [

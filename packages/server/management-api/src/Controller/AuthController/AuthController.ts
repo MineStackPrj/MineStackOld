@@ -2,9 +2,9 @@ import { inject } from 'inversify';
 import { BaseHttpController, controller, httpPost, requestBody } from 'inversify-express-utils';
 import { JsonResult } from 'inversify-express-utils/dts/results';
 
-import { AuthService } from '../../Service/AuthService/AuthService';
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { TYPES } from '../../TYPES';
+import { AuthService } from '@service/AuthService/AuthService';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 
 @controller('/auth', TYPES.middleware.access)
 export class AuthController extends BaseHttpController {

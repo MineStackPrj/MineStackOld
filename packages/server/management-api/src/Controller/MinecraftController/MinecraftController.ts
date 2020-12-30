@@ -4,17 +4,16 @@ import {
   controller, httpGet, httpPost, interfaces, requestBody, requestParam, response
 } from 'inversify-express-utils';
 
+import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { MinecraftService } from '@service/MinecraftService/MinecraftService';
+import { MinecraftServiceCreateRequest } from '@service/MinecraftService/types/MinecraftServiceRequest';
+import { TYPES } from '@src/TYPES';
+import { NotFoundError } from '@table/NotFoundError';
 import { IResponse, SuccessResponse } from '@type-def-prj/Response';
 import { BadRequestResponse } from '@type-def-prj/Response/BadRequestResponse';
 import { InternalServerResponse } from '@type-def-prj/Response/InternalServerResponse';
 import { NotFoundResponse } from '@type-def-prj/Response/NotFoundResponse';
-
-import { AlreadyInUsedPortError } from '../../Error/AlreadyInUsedPortError';
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { MinecraftService } from '../../Service/MinecraftService/MinecraftService';
-import { MinecraftServiceCreateRequest } from '../../Service/MinecraftService/types/MinecraftServiceRequest';
-import { NotFoundError } from '../../Table/NotFoundError';
-import { TYPES } from '../../TYPES';
 
 @controller('/minecraft', TYPES.middleware.access)
 export class MinecraftController implements interfaces.Controller {

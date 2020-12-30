@@ -1,10 +1,10 @@
 import { inject, injectable } from 'inversify';
 import mongoose, { Document } from 'mongoose';
 
-import { DatabaseError } from '../../Table/MongooseError';
-import { NotFoundError } from '../../Table/NotFoundError';
-import { TYPES } from '../../TYPES';
-import { LoggerService } from '../LoggerService/LoggerService';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
+import { DatabaseError } from '@table/MongooseError';
+import { NotFoundError } from '@table/NotFoundError';
 
 /**
  * MongoDBのトランザクション管理サービス

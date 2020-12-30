@@ -1,7 +1,6 @@
+import { setLocalStorage } from '@actions/LocalStorage';
+import { IAuthUserInfo } from '@actions/types/AuthUserInfo';
 import { createSlice } from '@reduxjs/toolkit';
-
-import { setLocalStorage } from '../actions/LocalStorage';
-import { IAuthUserInfo } from '../actions/types/AuthUserInfo';
 
 const initialState: { user: IAuthUserInfo } = {
   user: {

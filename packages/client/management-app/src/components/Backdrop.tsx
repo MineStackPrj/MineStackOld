@@ -3,8 +3,7 @@ import React from 'react';
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
-import { useSelector } from '../utils/ReactHooksOrigin';
+import { useSelector } from '@utils/ReactHooksOrigin';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

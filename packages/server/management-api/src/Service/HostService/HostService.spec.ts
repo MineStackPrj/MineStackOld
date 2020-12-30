@@ -2,12 +2,13 @@ import getPort from 'get-port';
 import { Container, decorate, injectable } from 'inversify';
 import { mocked } from 'ts-jest/utils';
 
-import { AlreadyInUsedPortError } from '../../Error/AlreadyInUsedPortError';
-import { TYPES } from '../../TYPES';
-import { LoggerService } from '../LoggerService/LoggerService';
+import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
+
 import { HostService } from './HostService';
 
-jest.mock('../../Service/LoggerService/LoggerService');
+jest.mock('@service/LoggerService/LoggerService');
 jest.mock('get-port');
 
 decorate(injectable(), LoggerService);

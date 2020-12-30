@@ -1,14 +1,15 @@
 import { Container, decorate, injectable } from 'inversify';
 import { mocked } from 'ts-jest/utils';
 
-import { MinecraftServerModel } from '../../Table/MinecraftServerTable/types/MinecraftServerModel';
-import { DatabaseError } from '../../Table/MongooseError';
-import { TYPES } from '../../TYPES';
-import { LoggerService } from '../LoggerService/LoggerService';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
+import { MinecraftServerModel } from '@table/MinecraftServerTable/types/MinecraftServerModel';
+import { DatabaseError } from '@table/MongooseError';
+
 import { MongooseService } from './MongooseService';
 
-jest.mock('../../Table/MinecraftServerTable/types/MinecraftServerModel');
-jest.mock('../LoggerService/LoggerService');
+jest.mock('@table/MinecraftServerTable/types/MinecraftServerModel');
+jest.mock('@service/LoggerService/LoggerService');
 
 decorate(injectable(), LoggerService);
 

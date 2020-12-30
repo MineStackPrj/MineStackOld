@@ -6,15 +6,15 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import { getLocalStorage } from '@actions/LocalStorage';
 import green from '@material-ui/core/colors/green';
 import teal from '@material-ui/core/colors/teal';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { indexReducer } from '@reducers/reducers';
+import { setUser } from '@reducers/UserAuthInfoReducers';
 import { configureStore } from '@reduxjs/toolkit';
 
-import { getLocalStorage } from './actions/LocalStorage';
 import App from './App';
-import { indexReducer } from './reducers';
-import { setUser } from './reducers/UserAuthInfoReducers';
 
 // Material-UIテーマカスタマイズ
 const theme = createMuiTheme({

@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
-import { MongooseSchemaDefinition } from '../../MongooseSchema';
+import { MongooseSchemaDefinition } from '@table/MongooseSchema';
+
 import { IUser } from './IUser';
 import { IUserDocument } from './IUserDocument';
 

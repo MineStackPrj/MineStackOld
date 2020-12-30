@@ -70,6 +70,12 @@ module.exports = {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
+    '^@controller(.*)$'  : '<rootDir>/src/Controller/$1',
+    '^@error(.*)$'       : '<rootDir>/src/Error/$1',
+    '^@middleware(.*)$'  : '<rootDir>/src/Middleware/$1',
+    '^@service(.*)$'     : '<rootDir>/src/Service/$1',
+    '^@table(.*)$'       : '<rootDir>/src/Table/$1',
+    '^@src(.*)$'         : '<rootDir>/src/$1',
     '^@type-def-prj(.*)$': '<rootDir>/../../common/type-def-prj/src/$1'
   },
 

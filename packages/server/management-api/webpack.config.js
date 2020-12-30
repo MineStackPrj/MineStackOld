@@ -34,6 +34,12 @@ const common = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     alias     : {
+      '@controller': path.resolve(__dirname, './src/Controller'),
+      '@error': path.resolve(__dirname, './src/Error'),
+      '@middleware': path.resolve(__dirname, './src/Middleware'),
+      '@service': path.resolve(__dirname, './src/Service'),
+      '@table': path.resolve(__dirname, './src/Table'),
+      '@src': path.resolve(__dirname, './src'),
       '@type-def-prj': path.resolve(__dirname, './../../common/type-def-prj/src')
     }
   }

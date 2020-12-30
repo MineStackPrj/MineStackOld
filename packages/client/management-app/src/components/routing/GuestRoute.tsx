@@ -1,6 +1,7 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import { useSelector } from '../../utils/ReactHooksOrigin';
+import { Redirect, Route } from 'react-router-dom';
+
+import { useSelector } from '@utils/ReactHooksOrigin';
 
 export default function GuestRoute(props: any): JSX.Element {
   const isAuth = useSelector(state => state.auth.user.isAuth);

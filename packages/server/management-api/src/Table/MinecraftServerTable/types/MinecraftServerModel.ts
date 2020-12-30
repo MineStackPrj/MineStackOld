@@ -1,8 +1,8 @@
 import mongoose, { Schema } from 'mongoose';
 
+import { MongooseSchemaDefinition } from '@table/MongooseSchema';
 import { MinecraftServerTypeList, MinecraftServerVersionList } from '@type-def-prj/Minecraft';
 
-import { MongooseSchemaDefinition } from '../../MongooseSchema';
 import { IMinecraftServer } from './IMinecraftServer';
 import { IMinecraftServerDocument } from './IMinecraftServerDocument';
 

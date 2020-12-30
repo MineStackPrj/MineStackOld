@@ -1,11 +1,10 @@
-import { MinecraftServerTypeList, MinecraftServerVersionList } from '@type-def-prj/Minecraft';
-
-import { ApiRequestValidator } from '../../../Middleware/ValidatorMiddleware/ApiRequestValidator';
-import { ValidatorMiddleware } from '../../../Middleware/ValidatorMiddleware/ValidatorMiddleware';
-import { MinecraftServiceCreateRequest } from '../../../Service/MinecraftService/types/MinecraftServiceRequest';
+import { ApiRequestValidator } from '@middleware/ValidatorMiddleware/ApiRequestValidator';
+import { ValidatorMiddleware } from '@middleware/ValidatorMiddleware/ValidatorMiddleware';
+import { MinecraftServiceCreateRequest } from '@service/MinecraftService/types/MinecraftServiceRequest';
 import {
   LevelTypeList, MinecraftDifficultyTypeList, MinecraftGameModeTypeList
-} from '../../../Table/MinecraftServerTable/types/ServerProperties';
+} from '@table/MinecraftServerTable/types/ServerProperties';
+import { MinecraftServerTypeList, MinecraftServerVersionList } from '@type-def-prj/Minecraft';
 
 export class MinecraftCreateValidator extends ValidatorMiddleware {
   /**

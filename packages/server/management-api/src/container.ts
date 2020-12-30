@@ -1,24 +1,25 @@
 import { Container } from 'inversify';
 
-import { AuthController } from './Controller/AuthController/AuthController';
-import { MinecraftController } from './Controller/MinecraftController/MinecraftController';
-import { MinecraftCreateValidator } from './Controller/MinecraftController/Validator/MinecraftCreateValidator';
-import { MinecraftGetValidator } from './Controller/MinecraftController/Validator/MinecraftGetValidator';
-import { UserController } from './Controller/UserController/UserController';
-import { UserCreateValidator } from './Controller/UserController/Validator/UserCreateValidator';
-import { UserGetValidator } from './Controller/UserController/Validator/UserGetValidator';
-import { AccessMiddleware } from './Middleware/AccessMiddleware/AccessMiddleware';
-import { JwtAuthMiddleware } from './Middleware/AuthMiddleware/JwtAuthMiddleware';
-import { LocalAuthMiddleware } from './Middleware/AuthMiddleware/LocalAuthMiddleware';
-import { AuthService } from './Service/AuthService/AuthService';
-import { DockerService } from './Service/DockerService/DockerService';
-import { HostService } from './Service/HostService/HostService';
-import { LoggerService } from './Service/LoggerService/LoggerService';
-import { MinecraftService } from './Service/MinecraftService/MinecraftService';
-import { MongooseService } from './Service/MongooseService/MongooseService';
-import { UserService } from './Service/UserService/UserService';
-import { MinecraftServerTable } from './Table/MinecraftServerTable/MinecraftServerTable';
-import { UserTable } from './Table/UserTable/UserTable';
+import { AuthController } from '@controller/AuthController/AuthController';
+import { MinecraftController } from '@controller/MinecraftController/MinecraftController';
+import { MinecraftCreateValidator } from '@controller/MinecraftController/Validator/MinecraftCreateValidator';
+import { MinecraftGetValidator } from '@controller/MinecraftController/Validator/MinecraftGetValidator';
+import { UserController } from '@controller/UserController/UserController';
+import { UserCreateValidator } from '@controller/UserController/Validator/UserCreateValidator';
+import { UserGetValidator } from '@controller/UserController/Validator/UserGetValidator';
+import { AccessMiddleware } from '@middleware/AccessMiddleware/AccessMiddleware';
+import { JwtAuthMiddleware } from '@middleware/AuthMiddleware/JwtAuthMiddleware';
+import { LocalAuthMiddleware } from '@middleware/AuthMiddleware/LocalAuthMiddleware';
+import { AuthService } from '@service/AuthService/AuthService';
+import { DockerService } from '@service/DockerService/DockerService';
+import { HostService } from '@service/HostService/HostService';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { MinecraftService } from '@service/MinecraftService/MinecraftService';
+import { MongooseService } from '@service/MongooseService/MongooseService';
+import { UserService } from '@service/UserService/UserService';
+import { MinecraftServerTable } from '@table/MinecraftServerTable/MinecraftServerTable';
+import { UserTable } from '@table/UserTable/UserTable';
+
 import { TYPES } from './TYPES';
 
 export function createContainer(): Container {

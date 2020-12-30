@@ -4,12 +4,12 @@ import './App.scss';
 import React, { Component } from 'react';
 import { Switch } from 'react-router-dom';
 
-import ResponsiveDrawer from './components/Drawer';
-import GuestRoute from './components/routing/GuestRoute';
-import PrivateRoute from './components/routing/PrivateRoute';
-import RoutingURIDefine from './define/RoutingUri';
-import CreateServer from './pages/CreateServer';
-import Login from './pages/Login';
+import ResponsiveDrawer from '@components/Drawer';
+import GuestRoute from '@components/routing/GuestRoute';
+import PrivateRoute from '@components/routing/PrivateRoute';
+import RoutingURIDefine from '@define/RoutingUri';
+import CreateServer from '@pages/CreateServer';
+import Login from '@pages/Login';
 
 // React関連
 // コンテンツ

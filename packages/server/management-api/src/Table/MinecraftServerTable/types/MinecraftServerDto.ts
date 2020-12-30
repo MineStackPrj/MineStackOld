@@ -1,4 +1,5 @@
-import { CreateDto, UpdateDto } from '../../Dto';
+import { CreateDto, UpdateDto } from '@table/Dto';
+
 import { IMinecraftServer } from './IMinecraftServer';
 
 export type MinecraftServerCreateDto = CreateDto<

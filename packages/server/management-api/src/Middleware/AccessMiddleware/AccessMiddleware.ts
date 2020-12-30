@@ -2,8 +2,8 @@ import { NextFunction, Request, Response } from 'express';
 import { inject, injectable } from 'inversify';
 import { BaseMiddleware } from 'inversify-express-utils';
 
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { TYPES } from '../../TYPES';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { TYPES } from '@src/TYPES';
 
 @injectable()
 export class AccessMiddleware extends BaseMiddleware {
