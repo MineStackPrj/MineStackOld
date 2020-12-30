@@ -2,10 +2,10 @@ import { NextFunction, Request, Response } from 'express';
 import { inject, injectable } from 'inversify';
 import { BaseMiddleware } from 'inversify-express-utils';
 
+import { TYPES } from '@/TYPES';
+import { LoggerService } from '@service/LoggerService/LoggerService';
 import { BadRequestResponse } from '@type-def-prj/Response/BadRequestResponse';
 
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { TYPES } from '../../TYPES';
 import {
   ApiRequestValidator, IArrayRequestValidator, IEnumRequestValidator, INumberRequestValidator, IObjectRequestValidator,
   IStringRequestValidator, RequestValidator

@@ -1,11 +1,11 @@
 import Dockerode from 'dockerode';
 import { inject, injectable } from 'inversify';
 
+import { TYPES } from '@/TYPES';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { IMinecraftServer } from '@table/MinecraftServerTable/types/IMinecraftServer';
 import { MinecraftServerStatus } from '@type-def-prj/Minecraft';
 
-import { IMinecraftServer } from '../../Table/MinecraftServerTable/types/IMinecraftServer';
-import { TYPES } from '../../TYPES';
-import { LoggerService } from '../LoggerService/LoggerService';
 import { DockerError } from './DockerError';
 
 /**

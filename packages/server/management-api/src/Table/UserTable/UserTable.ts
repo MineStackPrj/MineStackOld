@@ -1,9 +1,10 @@
 import { inject, injectable } from 'inversify';
 
-import { InternalServerError } from '../../Error/InternalServerError';
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { TYPES } from '../../TYPES';
-import { DatabaseError } from '../MongooseError';
+import { TYPES } from '@/TYPES';
+import { InternalServerError } from '@error/InternalServerError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { DatabaseError } from '@table/MongooseError';
+
 import { IUser } from './types/IUser';
 import { UserCreateDto } from './types/UserDto';
 import { UserModel } from './types/UserModel';

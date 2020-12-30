@@ -1,5 +1,5 @@
-import { ApiRequestValidator } from '../../../Middleware/ValidatorMiddleware/ApiRequestValidator';
-import { ValidatorMiddleware } from '../../../Middleware/ValidatorMiddleware/ValidatorMiddleware';
+import { ApiRequestValidator } from '@middleware/ValidatorMiddleware/ApiRequestValidator';
+import { ValidatorMiddleware } from '@middleware/ValidatorMiddleware/ValidatorMiddleware';
 
 export class MinecraftGetValidator extends ValidatorMiddleware {
   /**

@@ -1,12 +1,13 @@
 import { Container, decorate, injectable } from 'inversify';
 
-import { InternalServerError } from '../../Error/InternalServerError';
-import { TYPES } from '../../TYPES';
-import { LoggerService } from '../LoggerService/LoggerService';
+import { TYPES } from '@/TYPES';
+import { InternalServerError } from '@error/InternalServerError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+
 import { DockerError } from './DockerError';
 import { DockerService } from './DockerService';
 
-jest.mock('../../Service/LoggerService/LoggerService');
+jest.mock('@service/LoggerService/LoggerService');
 jest.mock('get-port');
 
 decorate(injectable(), LoggerService);

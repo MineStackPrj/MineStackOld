@@ -1,9 +1,9 @@
 import { inject, injectable } from 'inversify';
 import { BaseMiddleware } from 'inversify-express-utils';
 
-import { AuthService } from '../../Service/AuthService/AuthService';
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { TYPES } from '../../TYPES';
+import { TYPES } from '@/TYPES';
+import { AuthService } from '@service/AuthService/AuthService';
+import { LoggerService } from '@service/LoggerService/LoggerService';
 
 @injectable()
 export class LocalAuthMiddleware extends BaseMiddleware {

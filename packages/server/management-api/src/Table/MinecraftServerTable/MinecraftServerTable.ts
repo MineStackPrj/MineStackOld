@@ -1,9 +1,10 @@
 import { inject, injectable } from 'inversify';
 
-import { AlreadyInUsedPortError } from '../../Error/AlreadyInUsedPortError';
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { MongooseService } from '../../Service/MongooseService/MongooseService';
-import { TYPES } from '../../TYPES';
+import { TYPES } from '@/TYPES';
+import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { MongooseService } from '@service/MongooseService/MongooseService';
+
 import { IMinecraftServer } from './types/IMinecraftServer';
 import { MinecraftServerCreateDto } from './types/MinecraftServerDto';
 import { MinecraftServerModel } from './types/MinecraftServerModel';

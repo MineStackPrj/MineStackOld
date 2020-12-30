@@ -1,19 +1,20 @@
 import { Container, decorate, injectable } from 'inversify';
 
-import { AlreadyInUsedPortError } from '../../Error/AlreadyInUsedPortError';
-import { InternalServerError } from '../../Error/InternalServerError';
-import { MinecraftServerTable } from '../../Table/MinecraftServerTable/MinecraftServerTable';
-import { NotFoundError } from '../../Table/NotFoundError';
-import { TYPES } from '../../TYPES';
-import { DockerService } from '../DockerService/DockerService';
-import { HostService } from '../HostService/HostService';
-import { LoggerService } from '../LoggerService/LoggerService';
+import { TYPES } from '@/TYPES';
+import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
+import { InternalServerError } from '@error/InternalServerError';
+import { DockerService } from '@service/DockerService/DockerService';
+import { HostService } from '@service/HostService/HostService';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { MinecraftServerTable } from '@table/MinecraftServerTable/MinecraftServerTable';
+import { NotFoundError } from '@table/NotFoundError';
+
 import { MinecraftService } from './MinecraftService';
 
-jest.mock('../../Service/LoggerService/LoggerService');
-jest.mock('../../Table/MinecraftServerTable/MinecraftServerTable');
-jest.mock('../DockerService/DockerService');
-jest.mock('../HostService/HostService');
+jest.mock('@service/LoggerService/LoggerService');
+jest.mock('@table/MinecraftServerTable/MinecraftServerTable');
+jest.mock('@service/DockerService/DockerService');
+jest.mock('@service/HostService/HostService');
 
 decorate(injectable(), LoggerService);
 decorate(injectable(), MinecraftServerTable);

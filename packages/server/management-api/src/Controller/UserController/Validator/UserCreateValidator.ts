@@ -1,6 +1,6 @@
-import { ApiRequestValidator } from '../../../Middleware/ValidatorMiddleware/ApiRequestValidator';
-import { ValidatorMiddleware } from '../../../Middleware/ValidatorMiddleware/ValidatorMiddleware';
-import { IUser } from '../../../Table/UserTable/types/IUser';
+import { ApiRequestValidator } from '@middleware/ValidatorMiddleware/ApiRequestValidator';
+import { ValidatorMiddleware } from '@middleware/ValidatorMiddleware/ValidatorMiddleware';
+import { IUser } from '@table/UserTable/types/IUser';
 
 export class UserCreateValidator extends ValidatorMiddleware {
   /**

@@ -1,11 +1,11 @@
 import * as bcrypt from 'bcrypt';
 import { inject, injectable } from 'inversify';
 
-import { passwordSalt } from '../../config';
-import { IUser } from '../../Table/UserTable/types/IUser';
-import { UserTable } from '../../Table/UserTable/UserTable';
-import { TYPES } from '../../TYPES';
-import { LoggerService } from '../LoggerService/LoggerService';
+import { passwordSalt } from '@/config';
+import { TYPES } from '@/TYPES';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { IUser } from '@table/UserTable/types/IUser';
+import { UserTable } from '@table/UserTable/UserTable';
 
 /**
  * ユーザー情報を管理するサービス

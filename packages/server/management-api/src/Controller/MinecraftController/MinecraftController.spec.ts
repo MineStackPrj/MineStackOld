@@ -1,19 +1,18 @@
 import { Container, decorate, injectable } from 'inversify';
 
+import { TYPES } from '@/TYPES';
+import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { MinecraftService } from '@service/MinecraftService/MinecraftService';
 import { SuccessResponse } from '@type-def-prj/Response';
 import { BadRequestResponse } from '@type-def-prj/Response/BadRequestResponse';
 import { InternalServerResponse } from '@type-def-prj/Response/InternalServerResponse';
 import { NotFoundResponse } from '@type-def-prj/Response/NotFoundResponse';
 
-import { AlreadyInUsedPortError } from '../../Error/AlreadyInUsedPortError';
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { MinecraftService } from '../../Service/MinecraftService/MinecraftService';
-import { NotFoundError } from '../../Table/NotFoundError';
-import { TYPES } from '../../TYPES';
 import { MinecraftController } from './MinecraftController';
 
-jest.mock('../../Service/LoggerService/LoggerService');
-jest.mock('../../Service/MinecraftService/MinecraftService');
+jest.mock('@service/LoggerService/LoggerService');
+jest.mock('@service/MinecraftService/MinecraftService');
 
 decorate(injectable(), LoggerService);
 decorate(injectable(), MinecraftService);

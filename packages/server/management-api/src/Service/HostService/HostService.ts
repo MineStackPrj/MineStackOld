@@ -1,9 +1,9 @@
 import getPort from 'get-port';
 import { inject, injectable } from 'inversify';
 
-import { AlreadyInUsedPortError } from '../../Error/AlreadyInUsedPortError';
-import { TYPES } from '../../TYPES';
-import { LoggerService } from '../LoggerService/LoggerService';
+import { TYPES } from '@/TYPES';
+import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
 
 /**
  * Hostサーバーを制御

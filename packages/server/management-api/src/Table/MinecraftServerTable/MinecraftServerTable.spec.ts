@@ -1,17 +1,18 @@
 import { Container, decorate, injectable } from 'inversify';
 
-import { AlreadyInUsedPortError } from '../../Error/AlreadyInUsedPortError';
-import { LoggerService } from '../../Service/LoggerService/LoggerService';
-import { MongooseService } from '../../Service/MongooseService/MongooseService';
-import { TYPES } from '../../TYPES';
-import { DatabaseError } from '../MongooseError';
+import { TYPES } from '@/TYPES';
+import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
+import { LoggerService } from '@service/LoggerService/LoggerService';
+import { MongooseService } from '@service/MongooseService/MongooseService';
+import { DatabaseError } from '@table/MongooseError';
+
 import { MinecraftServerTable } from './MinecraftServerTable';
 import { MinecraftServerCreateDto } from './types/MinecraftServerDto';
 import { LevelTypeList, MinecraftDifficultyTypeList, MinecraftGameModeTypeList } from './types/ServerProperties';
 
 jest.mock('./types/MinecraftServerModel');
-jest.mock('../../Service/LoggerService/LoggerService');
-jest.mock('../../Service/MongooseService/MongooseService');
+jest.mock('@service/LoggerService/LoggerService');
+jest.mock('@service/MongooseService/MongooseService');
 
 decorate(injectable(), LoggerService);
 decorate(injectable(), MongooseService);
