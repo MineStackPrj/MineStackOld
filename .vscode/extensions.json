@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "formulahendry.auto-complete-tag",
+    "streetsidesoftware.code-spell-checker",
+    "vivaxy.vscode-conventional-commits",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "jock.svg",
+    "qinjia.view-in-browser",
+    "visualstudioexptteam.vscodeintellicode",
+    "mike-co.import-sorter",
+    "usernamehw.errorlens",
+    "bbenoist.vagrant",
+    "cschleiden.vscode-github-actions",
+    "humao.rest-client",
+    "ms-azuretools.vscode-docker"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "../../../lib/type-def-prj",
+    "declaration": true,
+    "declarationDir": "../../../lib/type-def-prj"
+  },
+  "include": ["src"]
+}

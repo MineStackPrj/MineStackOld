@@ -1,0 +1,77 @@
+@address=localhost
+@port=4500
+@baseUrl=http://{{address}}:{{port}}/api
+@contentType = application/json
+@minecraftId = 5fdda4e8a512710b63df3ae3
+
+### Minecraft Server List
+GET {{baseUrl}}/minecraft
+
+### Minecraft Server Create
+
+POST {{baseUrl}}/minecraft
+Content-Type: {{contentType}}
+
+{
+    "name": "Minecraft 1.16",
+    "startServer": false,
+    "version": "1.16",
+    "serverType": "vanilla",
+    "serverPort": 25565,
+    "properties": {
+      "allowFlight": false,
+      "allowNether": true,
+      "difficulty": "normal",
+      "enableQuery": false,
+      "enableCommandBlock": false,
+      "forceGamemode": false,
+      "gamemode": "survival",
+      "generateStructures": true,
+      "hardcore": false,
+      "levelSeed": "",
+      "levelName": "world",
+      "levelType": "DEFAULT",
+      "maxBuildHeight": 256,
+      "maxPlayers": 20,
+      "maxTickTime": 60000,
+      "maxWorldSize": 29999984,
+      "motd": "A Minecraft Server",
+      "opPermissionLevel": 4,
+      "playerIdleTimeout": 0,
+      "pvp": false,
+      "queryPort": 25565,
+      "resourcePack": "",
+      "resourcePackSha1": "",
+      "snooperEnabled": true,
+      "spawnAnimals": true,
+      "spawnMonsters": true,
+      "spawnNpcs": true,
+      "spawnProtection": 16,
+      "viewDistance": 10,
+      "whiteList": ["asakura_pj"],
+      "ops": ["asakura_pj"],
+      "icon": "",
+      "announcePlayerAchievements": true,
+      "memory": "1g"
+    }
+}
+
+### Minecraft Server Get
+
+GET {{baseUrl}}/minecraft/{{minecraftId}}
+
+### Minecraft Server Status Get
+
+GET {{baseUrl}}/minecraft/{{minecraftId}}/status
+
+### Minecraft Server Start
+
+# POST {{baseUrl}}/minecraft/{{minecraftId}}/start
+
+### Minecraft Server ReStart
+
+# POST {{baseUrl}}/minecraft/{{minecraftId}}/restart
+
+### Minecraft Server Stop
+
+# DELETE {{baseUrl}}/minecraft/{{minecraftId}}/stop
