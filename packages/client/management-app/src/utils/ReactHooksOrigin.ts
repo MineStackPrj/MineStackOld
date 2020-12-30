@@ -1,6 +1,6 @@
 import { TypedUseSelectorHook, useSelector as rawUseSelector } from 'react-redux';
 
-import { IndexReducerType } from '@/reducers';
+import { IndexReducerType } from '@src/reducers/reducers';
 
 // 型情報付きのuseSelectorをここで宣言
 // eslint-disable-next-line import/prefer-default-export

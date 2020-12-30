@@ -331,6 +331,14 @@ module.exports = function (webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
+        '@static': path.resolve(__dirname, '../public'),
+        '@actions': path.resolve(__dirname, '../src/actions'),
+        '@components': path.resolve(__dirname, '../src/components'),
+        '@define': path.resolve(__dirname, '../src/define'),
+        '@pages': path.resolve(__dirname, '../src/pages'),
+        '@reducers': path.resolve(__dirname, '../src/reducers'),
+        '@utils': path.resolve(__dirname, '../src/utils'),
+        '@src': path.resolve(__dirname, '../src'),
         '@type-def-prj': path.resolve(__dirname, '../../../common/type-def-prj/src')
       },
       plugins: [

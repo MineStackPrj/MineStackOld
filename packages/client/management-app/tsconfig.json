@@ -28,7 +28,7 @@
       "@pages*": ["./src/pages*"],
       "@reducers*": ["./src/reducers*"],
       "@utils*": ["./src/utils*"],
-      "@/*": ["./src/*"],
+      "@src*": ["./src/*"],
       "@type-def-prj*": [
         "../../common/type-def-prj/src*"
       ]
