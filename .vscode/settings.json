@@ -16,6 +16,7 @@
     "largebiomes",
     "lcov",
     "maxlength",
+    "minecraft",
     "minestack",
     "minlength",
     "mojang",
@@ -60,5 +61,6 @@
   "importSorter.importStringConfiguration.tabSize": 2,
   "files.associations": {
     ".lintstagedrc": "json"
-  }
+  },
+  "typescript.tsdk": "/home/minestack/MineStack/node_modules/typescript/lib"
 }
