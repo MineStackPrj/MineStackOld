@@ -108,4 +108,29 @@ export class MinecraftController implements interfaces.Controller {
     res.status(response.code);
     res.send(response.toString());
   }
+
+  /**
+   * マイクラサーバーのリソース使用状況を取得
+   * @param minecraftId マイクラサーバーId
+   */
+  @httpGet('/:minecraftId/usage', TYPES.validator.minecraft.get)
+  public async getMinecraftServerUsage(
+    @response() res: Response,
+    @requestParam('minecraftId') minecraftId: string
+  ): Promise<void> {
+    this.logger.trace('MinecraftController', 'getMinecraftServer');
+    let response: IResponse<any>;
+    try {
+      const result = await this.minecraftService.getUsage(minecraftId);
+      response = new SuccessResponse(result);
+    } catch (err) {
+      if (err instanceof NotFoundError) {
+        response = new NotFoundResponse();
+      } else {
+        response = new InternalServerResponse();
+      }
+    }
+    res.status(response.code);
+    res.send(response.toString());
+  }
 }

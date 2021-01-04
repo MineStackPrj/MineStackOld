@@ -108,4 +108,8 @@ export class MinecraftService {
       }
     }
   }
-}
+
+  public async getUsage(minecraftId: string): Promise<any>{
+    this.logger.trace('DockerService', 'getUsage');
+    return this.docker.getUsage(minecraftId);
+  }}

@@ -88,6 +88,18 @@ export class DockerService {
     }
   }
 
+  public async getUsage(minecraftId: string): Promise<void> {
+    this.logger.trace('DockerService', 'getUsage');
+    try {
+      const result = await this.docker.getContainer(minecraftId).inspect();
+      const usage = result.NetworkSettings.Node;
+      this.logger.debug('usage', usage);
+    } catch (err) {
+      this.logger.error('DockerService', 'getUsage');
+      throw new DockerError(err);
+    }
+  }
+
   /**
    * nameのイメージをPullする
    * @param name イメージ名
