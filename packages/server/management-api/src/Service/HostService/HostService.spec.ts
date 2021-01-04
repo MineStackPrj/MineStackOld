@@ -7,6 +7,7 @@ import { mocked } from 'ts-jest/utils';
 import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
 import { TYPES } from '@src/TYPES';
+import { InternalServerResponse } from '@type-def-prj/Response/InternalServerResponse';
 
 import { HostService } from './HostService';
 
@@ -129,6 +130,28 @@ describe('HostService', () => {
           used : 1
         }
       });
+    });
+
+    it('CPU使用率の取得に失敗', async () => {
+    /* --------------------------- テストの前処理 --------------------------- */
+      jest.spyOn(os, 'cpus').mockReturnValue([
+        {
+        // @ts-ignore
+          times: {
+            user: 1,
+            idle: 0,
+            irq : 99
+          }
+        }
+      ]);
+      // @ts-ignore
+      jest.spyOn(si, 'mem').mockRejectedValue({
+      });
+
+      /* ------------------------ テスト対象関数を実行 ------------------------ */
+      await expect(service.getUsage()).rejects.toBeInstanceOf(InternalServerResponse);
+
+      /* ------------------------------ 評価項目 ------------------------------ */
     });
   });
 });
