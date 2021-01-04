@@ -5,7 +5,6 @@ export interface IResponse<T> {
   readonly code: number;
   readonly message: string;
   readonly value?: T;
-  toString(): string;
 }
 
 /**

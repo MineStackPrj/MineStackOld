@@ -1,6 +1,7 @@
 import { Container } from 'inversify';
 
 import { AuthController } from '@controller/AuthController/AuthController';
+import { HostController } from '@controller/HostController/HostController';
 import { MinecraftController } from '@controller/MinecraftController/MinecraftController';
 import { MinecraftCreateValidator } from '@controller/MinecraftController/Validator/MinecraftCreateValidator';
 import { MinecraftGetValidator } from '@controller/MinecraftController/Validator/MinecraftGetValidator';
@@ -29,6 +30,7 @@ export function createContainer(): Container {
   container.bind<MinecraftController>(TYPES.controller.minecraft).to(MinecraftController).inSingletonScope();
   container.bind<UserController>(TYPES.controller.user).to(UserController).inSingletonScope();
   container.bind<AuthController>(TYPES.controller.auth).to(AuthController).inSingletonScope();
+  container.bind<HostController>(TYPES.controller.host).to(HostController).inSingletonScope();
 
   // Validator
   container

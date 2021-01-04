@@ -1,9 +1,13 @@
 import getPort from 'get-port';
 import { inject, injectable } from 'inversify';
+import os from 'os';
+import si from 'systeminformation';
 
 import { AlreadyInUsedPortError } from '@error/AlreadyInUsedPortError';
 import { LoggerService } from '@service/LoggerService/LoggerService';
 import { TYPES } from '@src/TYPES';
+import { InternalServerResponse } from '@type-def-prj/Response/InternalServerResponse';
+import { IHostUsageGetResponse } from '@type-def-prj/Response/Success/IHostUsageGetResponse';
 
 /**
  * Hostサーバーを制御
@@ -29,5 +33,34 @@ export class HostService {
     }
     this.logger.debug('Get Port:', result);
     return result;
+  }
+
+  /**
+   * ホストPCのリソース消費情報を取得
+   * @throws {InternalServerResponse}
+   */
+  public async getUsage(): Promise<IHostUsageGetResponse> {
+    try {
+      const cores = os.cpus().map(c => {
+        const total = Object.values(c.times).reduce((a, b) => a + b, 0);
+        return c.times.user / total * 100;
+      });
+      const totalCpuUsed = cores.map(m => m * (1 / cores.length)).reduce((a, b) => a + b, 0);
+      const mem = await si.mem();
+      const memUsed = mem.used / mem.total * 100;
+      const result: IHostUsageGetResponse = {
+        cpu: {
+          used: totalCpuUsed,
+          cores
+        },
+        mem: {
+          total: mem.total,
+          used : memUsed
+        }
+      };
+      return result;
+    } catch {
+      throw new InternalServerResponse();
+    }
   }
 }

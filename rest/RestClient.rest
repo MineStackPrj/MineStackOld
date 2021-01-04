@@ -75,3 +75,7 @@ GET {{baseUrl}}/minecraft/{{minecraftId}}/status
 ### Minecraft Server Stop
 
 # DELETE {{baseUrl}}/minecraft/{{minecraftId}}/stop
+
+### Host Server Usage
+
+GET {{baseUrl}}/host/usage
