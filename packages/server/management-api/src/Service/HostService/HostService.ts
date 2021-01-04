@@ -40,6 +40,7 @@ export class HostService {
    * @throws {InternalServerResponse}
    */
   public async getUsage(): Promise<IHostUsageGetResponse> {
+    this.logger.trace('HostService', 'getUsage');
     try {
       const cores = os.cpus().map(c => {
         const total = Object.values(c.times).reduce((a, b) => a + b, 0);
