@@ -2,7 +2,8 @@ export const TYPES = {
   controller: {
     minecraft: Symbol.for('MinecraftController'),
     user     : Symbol.for('UserController'),
-    auth     : Symbol.for('AuthController')
+    auth     : Symbol.for('AuthController'),
+    host     : Symbol.for('HostController')
   },
   validator: {
     minecraft: {

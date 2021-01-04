@@ -27,6 +27,7 @@
     "reduxjs",
     "serializers",
     "svgr",
+    "systeminformation",
     "ttfb",
     "typeahead",
     "unmocked"
