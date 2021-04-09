@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "lib": ["ES2018", "dom"],
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["reflect-metadata", "jest", "jest-chain"],
+    "baseUrl": ".",
+    "paths": {
+      "@controller*": ["./src/Controller*"],
+      "@error*": ["./src/Error*"],
+      "@middleware*": ["./src/Middleware*"],
+      "@service*": ["./src/Service*"],
+      "@table*": ["./src/Table*"],
+      "@src*": ["./src*"],
+      "@type-def-prj*": [
+        "../../common/type-def-prj/src*"
+      ]
+    }
+  },
+  "include": ["src", "../../common/type-def-prj/src"]
+}
