@@ -1,0 +1,13 @@
+{
+  "fail": {
+    "prefix": "fileHeader",
+    "body": [
+      "/**",
+      " * @file $TM_FILENAME",
+      " * @author MineStackPrj",
+      " * @copyright Copyright © 2021 MineStackPrj All rights reserved.",
+      " */"
+    ],
+    "description": "Create Header"
+  }
+}

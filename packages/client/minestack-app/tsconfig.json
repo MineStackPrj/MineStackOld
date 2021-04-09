@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@static*": ["./public*"],
+      "@actions*": ["./src/actions*"],
+      "@components*": ["./src/components*"],
+      "@define*": ["./src/define*"],
+      "@pages*": ["./src/pages*"],
+      "@reducers*": ["./src/reducers*"],
+      "@utils*": ["./src/utils*"],
+      "@src*": ["./src*"],
+      "@stories/common*": ["../../common/storybook-prj/src/common*"],
+      "@stories/minestack*": ["../../common/storybook-prj/src/minestack*"],
+      "@type-def-prj*": [
+        "../../common/type-def-prj/src*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "../../common/type-def-prj/src",
+    "../../common/storybook-prj/src/common"
+  ]
+}

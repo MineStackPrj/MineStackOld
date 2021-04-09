@@ -1,0 +1,17 @@
+node_modules
+dist
+esm
+lib
+.vagrant
+id_rsa.pub
+coverage
+cdk.out
+e2e-report
+.eslintcache
+storybook
+*.log
+*.box
+db/mysql_data
+.env
+id_rsa_ec2*
+out

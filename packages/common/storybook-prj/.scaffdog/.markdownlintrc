@@ -1,0 +1,12 @@
+{
+  "MD024": {
+    "siblings_only": true
+  },
+  "MD013": {
+    "line_length": 100000
+  },
+  "MD025": {
+    "level": 1000,
+    "front_matter_title": ""
+  }
+}

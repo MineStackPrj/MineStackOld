@@ -1,0 +1,37 @@
+{
+  "cSpell.words": [
+      "akasaki",
+      "commitlint",
+      "conventionalcommits",
+      "flowtype",
+      "lcov",
+      "minestack",
+      "nohoist",
+      "reduxjs",
+      "scaffdog",
+      "testid",
+      "typeof"
+  ],
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.showOnAllFunctions": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "editor.formatOnSave": false,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.tabSize": 2,
+  "editor.stickyTabStops": true,
+  "editor.rulers": [140],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    ".lintstagedrc": "json"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.format.enable": true,
+  "eslint.packageManager": "yarn",
+}

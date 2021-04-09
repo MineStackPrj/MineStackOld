@@ -1,0 +1,66 @@
+{
+  "name": "storybook-prj",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "t-akasaki <t.akasaki.csharp@gmail.com>",
+  "homepage": "https://github.com/MineStackPrj/MineStack/tree/master/packages/common/storybook-prj#readme",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "module": "./esm/index.d.ts",
+  "private": true,
+  "directories": {
+    "lib": "lib",
+    "esm": "esm"
+  },
+  "files": [
+    "lib",
+    "esm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MineStackPrj/MineStack.git"
+  },
+  "scripts": {
+    "test": "jest --config jest.config.js --watch",
+    "test:update": "jest --config jest.config.js --updateSnapshot",
+    "test:coverage": "jest --config jest.config.js --coverage",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook -o ./storybook",
+    "story-g": "scaffdog generate --project ./.scaffdog"
+  },
+  "bugs": {
+    "url": "https://github.com/MineStackPrj/MineStack/issues"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-app-polyfill": "^2.0.0",
+    "react-cookie": "^4.0.3",
+    "react-dom": "^17.0.1",
+    "recharts": "^2.0.8"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "6.1.15",
+    "@storybook/addon-links": "6.1.15",
+    "@storybook/addon-storyshots": "6.1.15",
+    "@storybook/addon-storysource": "6.1.15",
+    "@storybook/react": "6.1.15",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@types/axios": "^0.14.0",
+    "@types/node": "12.0.0",
+    "@types/react": "16.9.53",
+    "@types/react-dom": "16.9.8",
+    "@types/storybook__react": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.6.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "jest": "26.6.3",
+    "jest-circus": "26.6.3",
+    "jest-watch-typeahead": "0.6.1",
+    "scaffdog": "^1.0.0",
+    "typescript": "4.0.3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "declaration": true,
+    "declarationDir": "./lib"
+  },
+  "exclude": ["node_modules", "lib/*", "lib/**/*" ],
+  "include": ["src/*.ts", "src/**/*.ts"]
+}
