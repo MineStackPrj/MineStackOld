@@ -40,6 +40,10 @@
   "conventionalCommits.scopes": [
     "server",
     "client",
-    "common"
+    "common",
+    "vscode"
   ],
+  "files.exclude": {
+    "cypress": true
+  },
 }
